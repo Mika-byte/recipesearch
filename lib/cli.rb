@@ -1,3 +1,7 @@
+require 'pry'
+require 'net/http'
+require 'json'
+
 class CLI
     def start
         puts "Welcome"
@@ -24,4 +28,12 @@ class CLI
         else 
             puts "Bye, See you later!"
         end
+    end
+        def display_results
+            # Access all resuls
+            binding.pry
+            Result.all.each.with_index(1) do |result, index|
+                puts "#{index}. #{result.name}"
+            end 
+end
 end

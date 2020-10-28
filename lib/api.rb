@@ -10,7 +10,7 @@ class API
         uri = URI(url)
         response = Net::HTTP.get(uri)
         hash = JSON.parse(response)
-        binding.pry
+        
         array_of_results = hash["results"]
         result.title = result_hash["title"]
             result.ingredients = result_hash["ingredients"]
