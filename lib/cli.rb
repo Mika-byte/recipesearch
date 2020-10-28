@@ -46,4 +46,19 @@ class CLI
         puts "Sorry invalid. Choose a valid number"
         index = gets.strip.to_i - 1
   end
+
+  result_instance = Result.all[index]
+       
+    display_recipe_details(result_instance)
  end
+
+
+ def display_recipe_details(result)
+    sleep(1)
+    puts "\n"
+    puts result.title
+    puts "Title: " + result.title
+    puts "Ingredients: " + results.ingredients
+    puts "Thumbnail: " + results.thumbnail
+end
+end
