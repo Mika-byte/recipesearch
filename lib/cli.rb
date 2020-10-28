@@ -30,10 +30,20 @@ class CLI
         end
     end
         def display_results
-            # Access all resuls
+            # Access all resutls
             binding.pry
             Result.all.each.with_index(1) do |result, index|
-                puts "#{index}. #{result.name}"
-            end 
-end
-end
+                puts "#{index}. #{result.title}"
+    end 
+  end
+  def ask_user_for_type_of_recipe
+    puts "Enter the number of the recipe you'd like to know more about"
+    index = gets.strip.to_i - 1
+
+    # index valid? number between 0 and 6
+    until index.between?(0, Result.all.length - 1)
+        # keep asking for user input
+        puts "Sorry invalid. Choose a valid number"
+        index = gets.strip.to_i - 1
+  end
+ end
