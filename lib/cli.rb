@@ -16,4 +16,12 @@ class CLI
             #display the recipes
             display_results
             ask_user_for_type_of_recipe
+           
+            sleep(2)
+            puts "\n"
+    
+            recipe
+        else 
+            puts "Bye, See you later!"
+        end
 end
