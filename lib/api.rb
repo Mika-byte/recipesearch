@@ -24,7 +24,7 @@ class API
         result.ingredients = result_hash["ingredients"]
         result.thumbnail = result_hash["thumbnail"]
        end
-       binding.pry 
+      
     end
 
 end
